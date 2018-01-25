@@ -12,7 +12,6 @@ import {logout} from '../store'
  */
 const Main = (props) => {
   const {children, handleClick, isLoggedIn} = props
-
   return (
     <div>
       <h1>BOILERMAKER</h1>
