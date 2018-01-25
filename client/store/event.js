@@ -16,14 +16,14 @@ const defaultEvent = []
  * ACTION CREATORS
  */
 const getEvent = events => ({type: GET_EVENT, events})
-const addEvent = () => ({type: ADD_EVENT, event})
+const addEvent = event => ({type: ADD_EVENT, event})
 
 /**
  * THUNK CREATORS
  */
-export const me = () =>
+export const addMe = () =>
   dispatch =>
-    axios.get('/auth/me')
+    axios.get('/api/event')
       .then(res =>
         dispatch(getUser(res.data || defaultUser)))
       .catch(err => console.log(err))
