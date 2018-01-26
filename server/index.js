@@ -12,8 +12,7 @@ const PORT = process.env.PORT || 8080
 const app = express()
 const socketio = require('socket.io')
 const cron = require('node-cron');
-const myFunc = require('./cron');
-// import {myFunc} from './cron';
+const cronFunc = require('./cron');
 module.exports = app
 
 /**
@@ -26,7 +25,7 @@ module.exports = app
  */
 if (process.env.NODE_ENV !== 'production') require('../secrets')
 
-cron.schedule('*/10 * * * * *', myFunc);
+cron.schedule('*/5 * * * * *', cronFunc()); //running closure
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
