@@ -2,7 +2,7 @@
 ## Submitted by: Anuj Pant
 ### anuj.pant41@gmail.com
 
-I used a template that was created during my bootcamp studies. The project has following features/assumptions:
+###I used a template that was created during my bootcamp studies. The project has following features/assumptions:
 
 (1) Uses Google oAuth however there are no keys in my development environment and so cannot login via Google as currently written
 <br />
