@@ -1,25 +1,18 @@
-const crypto = require('crypto')
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const User = db.define('user', {
-  email: {
+const Event = db.define('event', {
+  name: {
     type: Sequelize.STRING,
-    unique: true,
     allowNull: false
   },
-  password: {
-    type: Sequelize.STRING
-  },
-  salt: {
-    type: Sequelize.STRING
-  },
-  googleId: {
-    type: Sequelize.STRING
+  location: {
+    type: Sequelize.STRING,
+    allowNull: false
   }
 })
 
-module.exports = User
+module.exports = Event
 
 /**
  * instanceMethods
