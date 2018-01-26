@@ -21,11 +21,18 @@ const addEvent = event => ({type: ADD_EVENT, event})
 /**
  * THUNK CREATORS
  */
-export const addMe = () =>
+
+export const getEvents = () =>
   dispatch =>
-    axios.get('/api/event')
+    axios.get('/api/event/')
+      .then(res => dispatch(getEvent(res.data)))
+      .catch(err => console.log(err));
+
+export const addMe = (name, location) =>
+  dispatch =>
+    axios.post('/api/event', { name, location })
       .then(res =>
-        dispatch(getUser(res.data || defaultUser)))
+        dispatch(addEvent(res.data)))
       .catch(err => console.log(err))
 
 /**

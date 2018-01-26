@@ -1,6 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {addMe} from '../store';
 
 /**
  * COMPONENT
@@ -39,12 +40,13 @@ const mapState = (state) => {
   }
 }
 
-const mapDispatch = (state) => {
+const mapDispatch = (dispatch) => {
   return {
     handleSubmit(event) {
       event.preventDefault();
-      const eventName = event.target.name.value;
-      const eventLocation = event.target.location.value;
+      const name = event.target.name.value;
+      const location = event.target.location.value;
+      dispatch(addMe(name, location));
     }
   }
 }
