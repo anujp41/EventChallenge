@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
   Event.findAll({
     attributes: ['name', 'location']
   })
-    .then(users => res.json(users))
+    .then(events => res.json(events))
     .catch(next)
 })
 
