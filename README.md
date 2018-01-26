@@ -4,7 +4,8 @@
 
 I used a template that was created during my bootcamp studies. The project has following features/assumptions:
 
-(1) Uses Google oAuth however there are no keys in my development environment and so cannot login via Google as currently written \n
+(1) Uses Google oAuth however there are no keys in my development environment and so cannot login via Google as currently written
+<br />
 (2) Requires a 'anujPulsd' table; table name can be changed in "./server/db/db/js"
 (3) Can only add to database after logged in
 (4) Database is agnostic of the user entering the event
