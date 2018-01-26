@@ -25,7 +25,7 @@ module.exports = app
  */
 if (process.env.NODE_ENV !== 'production') require('../secrets')
 
-cron.schedule('*/5 * * * * *', cronFunc()); //running closure
+cron.schedule('* */1 * * *', cronFunc()); //running closure
 
 // passport registration
 passport.serializeUser((user, done) => done(null, user.id))
